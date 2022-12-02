@@ -22,7 +22,7 @@ body {
 	background-color: #19caff;
 }
 
-.navbar {
+.clouds2 {
 	position: absolute;
 	display: flex;
 	justify-content: space-between;
@@ -64,7 +64,7 @@ body {
 	z-index: 1;
 	width: 100%;
 	min-width: 940px;
-	margin-top: 128px;
+	margin-top: 220px;
 }
 
 .mnalogo {
@@ -80,7 +80,7 @@ body {
 	animation: cloudscroll 50s linear infinite;
 	position: absolute;
 	left: 0;
-	margin-top: -330px;
+	margin-top: -420px;
 	z-index: -2;
 }
 
@@ -92,7 +92,7 @@ body {
 	background-position: bottom;
 	width: 100%;
 	background-repeat: repeat-x;
-    margin-top: 880px;
+    margin-top: 824px;
 }
 
 .allcontainers {
