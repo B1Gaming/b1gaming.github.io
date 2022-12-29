@@ -157,6 +157,11 @@ body {
 	width: 426px;
 }
 
+.footertext {
+	color:#FFFFFF;
+	text-shadow: 0 0 10px #000000;
+}
+
 a {
 	color: #FFFFFF;
 }
