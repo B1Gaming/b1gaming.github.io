@@ -115,10 +115,6 @@ body {
 	grid-area: videos;
 }
 
-.container4 {
-	grid-area: links;
-}
-
 .maingrid {
 	display: grid;
 	grid-template-areas:
