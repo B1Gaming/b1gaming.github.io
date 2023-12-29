@@ -1,55 +1,55 @@
 .main {
-	position: absolute;
-	width: auto;
-	margin: 10% 10%;
+    position: absolute;
+    width: auto;
+    margin: 10% 10%;
 }
 
 .title {
-	font-size: 50pt;
-	text-decoration: underline;
+    font-size: 50pt;
+    text-decoration: underline;
 }
 
 .mainalign {
-	text-align: center;
-	width: auto;
-	margin-bottom: 50px;
+    text-align: center;
+    width: auto;
+    margin-bottom: 50px;
 }
 
 .grid {
-	display: grid;
-	grid-template-columns: 50% 50%;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 .griditem {
-	background-color: #DFDFDF;
-	border: 1px solid #000000;
-	padding: 20px;
-	font-size: 16pt;
-	text-align: center;
+    background-color: #DFDFDF;
+    border: 1px solid #000000;
+    padding: 20px;
+    font-size: 16pt;
+    text-align: center;
 }
 
 .image {
-	width: 100%;
+    width: 100%;
 }
 
 .imagebsc {
-	width: 66.6%;
+    width: 66.6%;
 }
 
 .iconbsc {
-	width: 30%;
+    width: 30%;
 }
 
 .iconsplat {
-	width: 30%;
-	padding-left: 32px;
-	padding-right: 32px;
+    width: 30%;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
 .iconskaven {
-	width: 50%;
+    width: 50%;
 }
 
 .sidenotes {
-	font-size:12pt;
+    font-size:12pt;
 }
