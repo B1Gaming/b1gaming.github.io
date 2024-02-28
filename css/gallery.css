@@ -9,7 +9,7 @@
     text-decoration: underline;
 }
 
-.mainalign {
+.main-align {
     text-align: center;
     width: auto;
     margin-bottom: 50px;
@@ -20,7 +20,7 @@
     grid-template-columns: 50% 50%;
 }
 
-.griditem {
+.grid-item {
     background-color: #DFDFDF;
     border: 1px solid #000000;
     padding: 20px;
@@ -32,21 +32,21 @@
     width: 100%;
 }
 
-.imagebsc {
+.image-bsc {
     width: 66.6%;
 }
 
-.iconbsc {
+.icon-bsc {
     width: 30%;
 }
 
-.iconsplat {
+.icon-splat {
     width: 30%;
     padding-left: 32px;
     padding-right: 32px;
 }
 
-.iconskaven {
+.icon-skaven {
     width: 50%;
 }
 
