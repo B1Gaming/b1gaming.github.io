@@ -1,60 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=yes">
-	<title>Mario's New Adventure</title>
-	<link rel="stylesheet" href="../css/mna.css">
-	<link rel="icon" type="image/png" href="img/favicon.png">
-	<script src="buttons.js" defer></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+  <title>Mario's New Adventure</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap" rel="stylesheet">
+  <script src="./script.js" defer></script>
 </head>
 <body>
-	<div class="clouds2">
-		<!-- <button class="navbutton"><a href="#about" class="link">About</a></button>
-		<button class="navbutton"><a href="#screenshots" class="link">Screenshots</a></button>
-		<button class="navbutton"><a href="#videos" class="link">Videos</a></button>
-		<button class="navbutton"><a href="#links" class="link">Other</a></button> -->
-		<button class="navbutton"><a href="../" class="link">Homepage</a></button>
-	</div>
-	<div class="logoheader">
-		<img src="img/mna_logo.png" alt="Mario's New Adventure Logo" class="mnalogo">
-	</div>
-	<div class="clouds">
-		<div class="main">
-			<div class="maingrid">
-				<div class="container1 allcontainers" id="about">
-					<p class="header">
-						<button class="headerbutton">About</button>
-					</p>
-					Mario's New Adventure's development started all the way back in 2018.
-					<br>This modification of New Super Mario Bros. Wii aims to give its players a unique yet Nintendo-like experience.
-					<br>An exciting journey with 8 worlds and more than 70 new levels awaits. Many collectibles and secrets can be found along the way.
-					<br><br><br>Trailer shown at the NSMB Franchise Modding Direct
-					<br><br><iframe width="640" height="360" src="https://www.youtube.com/embed/L3igvmsNNiM" allowfullscreen class="video"></iframe>
-					<br><br><br>A demo with the first world being available to play can be found here:
-					<br><br><a href="https://drive.google.com/u/0/uc?id=1Dr7A0U3EKgCprH29eSj3zMBBToWxqLQB&export=download" target="_blank" rel="noopener noreferrer"><img src="img/demodownload.svg" alt="DOWNLOAD THE DEMO" class="demodownload"></a>
-				</div>
-				<div class="container2 allcontainers" id="screenshots">
-					<p class="header">
-						<button class="headerbutton">Screenshots</button>
-					</p>
-						New screenshots are being added soon...
-					<!--<div class="sstext">
-							More and/or newer screenshots may be added later...
-					</div>-->
-				</div>
-				<div class="container3 allcontainers" id="videos">
-					<p class="header">
-						<button class="headerbutton">Videos</button>
-					</p>
-					Development Playlist
-					<br><br><br><iframe width="640" height="360" src="https://www.youtube.com/embed/?listType=playlist&list=PL8bMv0TWmfedp4UC5MBMvvtBaxIyXpI2z" allowfullscreen class="video"></iframe>
-				</div>
-				<br><br>
-			</div>
-			<p class="footertext">©2023 B1 Gaming</p>
-		</div>
-	</div>
+<div class="background-container">
+  <div class="background-element" id="underground"></div>
+  <div class="background-element" id="transition"></div>
+  <div class="background-element" id="overground"></div>
+  <div class="background-element" id="sky"></div>
+  <div class="background-element" id="clouds"></div>
+</div>
+<div id="cloudy-header">
+  <div class="button-group">
+    <a href="../">
+      <button type="button" class="button">Homepage</button>
+    </a>
+  </div>
+  <div class="button-group">
+    <button type="button" class="button" onclick="viewBackground()">View Background</button>
+    <button type="button" class="button" id="toggle-animations" onclick="toggleAnimations()">Disable Animations</button>
+  </div>
+</div>
+<div id="title">
+  <img src="img/mna_logo_small.png" alt="Mario's New Adventure Logo" id="mna-logo"/>
+</div>
+<div id="main-page">
+  <div class="frame">
+    <div class="header">About</div>
+    <div class="content">
+      <div class="base">Mario's New Adventure started development all the way back in 2018.
+        <br>
+        This modification of New Super Mario Bros. Wii aims to give its players a unique yet Nintendo-like experience.
+        <br>
+        An exciting journey with 8 worlds, more than 70 new levels and many secrets to find along the way.
+      </div>
+    </div>
+  </div>
+  <div class="frame">
+    <div class="header">Try it yourself</div>
+    <div class="content">
+      <div class="base">
+        <a href="https://drive.google.com/u/0/uc?id=1Dr7A0U3EKgCprH29eSj3zMBBToWxqLQB&export=download" target="_blank"
+           rel="noopener noreferrer" id="download-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1455 513" id="demo-download">
+            <path id="download-outline"
+                  d="M0.741,27.324L29.012,225.39,56.65,276.106l18.975-1.617,7.332,76.353,25.219,54.875,38.749-5.579,0.629,52.884,22.981,50.521,101.535-8.536-20.217-111,23.96-3.823,17.09,78.179,17.054,50.727,81.835-13.5L385,442l1.718,0.387,13.935,59.868,76.93-5.935,141.106,7.122-11.783-96.283,5.38,1.175L628.2,329.3l-4.894-53.931,19.69-2,1.99,42.522L672.4,507.383l121.749-10.962,33.825-35.278,11.653,34.788,149.351,7.533,3.422-17.727,39.644,18.225,20.93-68.752,17.46,28.73,23.97-22.8,0.61,68.871,99.02-8.537,4.02-11.148,61.69,21.985,84.51-36.363,24.84-50.988,13.11-101.091-52.54-55.357,35.81-3.24,51.96-55.248,27.96-51.694,8.78-97.269L1349.09,1.147,1238.23,27.178l-2.68,7.247L1132,19.4l-19.08,61.77-46.91-48.628L977.767,20.525,911.026,96.252l-3.289,18.814-39.653,11.828L865.9,7.084l-73.471,9.409V2.044L690.036,10.6l0.945,45.336-34.2-48.565L569.5,35.605l1.155,6.209-50.712-13.66-15,63.7L486.458,60.329,467.485,82.617,465.5,57.956,453.835,0.664,340.926,19.052l5.742,26.939-12.28-13.357-88.38-12.176L212.484,58.4,112.47,1.215Z"/>
+            <path id="download-red"
+                  d="M358.841,31.569l6.766,33.4L392.03,92.29l-7.5,60.129,8.343,41.8,60.369,7.2,24.287-41.177,17.584,45.872,58.356-3.941L598.514,64.017,531.085,46.343,510.8,131.8,483.806,86.007,449,126.656l-8.44-108.6ZM1254.65,39.306L1265.88,119l27.54,89.349,91.78-8.183,46.49-49.259,6.49-81.577-91.2-52.2Zm72.39,37.9,51.77,19.967-9.89,50.72-34.13,13.582Zm-856.8,192.1-2.78,9.9-1.387,150.5,0.787,4.243,126.83,6.3-6.722-49.272-67.46,5.873-3.491-20.431,50.018,8.07,8.948-41.5-56.724-2.225,7.161-20.163L595.2,335.09l10.088-49.9ZM989.151,375.31l5.457,38.247,39.6,18.99,26.98-89.047,26.94,44.1,37.21-35.346,0.52,91.179,69.82-6.4L1172.42,268.3l-44.61-6.492-31.09,47.468-14.71-53.282-47.06-7.3Z"/>
+            <path id="download-yellow"
+                  d="M252,36.605L216.009,77.455l-9.1,82.528L212.07,187.1l79.06,28.271,74.086-32.214,10.972-86.06-48.75-49.862Zm49.906,56.472L258.753,107.04l0.8,41.756,34.222,13.448,30.612-29.61ZM792.761,31.109L792.1,138.765l9.671,67.065,131.188-9.75,2-73.668-81.431,24.381L851.2,24.09ZM89.618,260.742l7.132,72.967,64.216-9.523,1.47,112.713,71.688-6.606L213.4,316.117l62.555-9.97-4.963-54.674Zm1152.873,7.475-46.93,53.542,13.52,99.231,72.48,25.865,74.06-32.127,10.58-85.489-48.22-50.42Zm50.09,56.539-43.36,13.9,0.62,41.751,34.33,13.817,30.99-29.665Z"/>
+            <path id="download-green"
+                  d="M586.61,45.382L617.7,54.126l-19.96,62.017L613.526,210.3l59.445-4.862-7.916-74.1,60,73.365,52-17.177L777.55,18.143,706.1,24.5l8.638,89.84L650.924,25.163ZM1142.41,36.36l-20.32,67.808-11.62,92.574,43.45,9.811,6.65-33.807,43.62-4.084,7.8,38.221,63.38-6.266L1228.9,48.423Zm27.99,90.877,27.07,3.232-7.98-40.405-11.36-1.818ZM287.437,263.146l5.237,55.831-14.006,2.6,26.33,120,55.216-9.607-6.851-54.007L393.94,368l6.9,67.268,52.313-4.234,1.9-177.025-72.192,4.066,6.381,63.8-42.31,0-8.412-67.955Zm571.68,3.6-5.3,22,5.827,3.943-8.351,96.863-6.659,6.264,11.441,35.229,127.016,6.414-6.948-49.758-67.574,6.323-3.749-19.993,50.259,6.942,8.933-40.791-56.473-2.313,6.94-20.064,64.164,18.091L992.1,285.094Z"/>
+            <path id="download-blue"
+                  d="M17.441,39.023l92.784-21.716,91.619,52.1L192.586,155.2,148,199.972,41.857,209.834ZM90.455,77.808L141.9,97.091l-9.8,50.707L97.811,161.45ZM984.2,36.139L926.37,101.383l1.794,7.9,22.2-6.96-2.3,85.989,74.659,26.958,73.69-28.291,11.13-89.908-48.67-50.653Zm6.271,71.071,43.462-14.175,22.02,39.507-30.48,30.432-34.4-14.306ZM659.322,269.964l24.344,170.615L789.5,431.47l46.378-49.524,7.335-81.925-91.73-51.807Zm72.686,38.59,6.928,83.612L774,379.055l9.372-50.776Z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="frame">
+    <div class="header">Screenshots</div>
+    <div class="content">
+      <div class="base">
+        <div id="grid">
+          <a href="img/screenshot/1.png" class="grid-item">
+            <img loading="lazy" src="img/screenshot/1.png" alt="Forest Level" class="image">
+          </a>
+          <a href="img/screenshot/2.png" class="grid-item">
+            <img loading="lazy" src="img/screenshot/2.png" alt="Underground Level" class="image">
+          </a>
+          <a href="img/screenshot/3.png" class="grid-item">
+            <img loading="lazy" src="img/screenshot/3.png" alt="Mountain Level" class="image">
+          </a>
+          <a href="img/screenshot/4.png" class="grid-item">
+            <img loading="lazy" src="img/screenshot/4.png" alt="Totem Level" class="image">
+          </a>
+          <a href="img/screenshot/5.png" class="grid-item">
+            <img loading="lazy" src="img/screenshot/5.png" alt="Beach Level" class="image">
+          </a>
+          <a href="img/screenshot/6.png" class="grid-item">
+            <img loading="lazy" src="img/screenshot/6.png" alt="Sky Level" class="image">
+          </a>
+          <a href="img/screenshot/7.png" class="grid-item">
+            <img loading="lazy" src="img/screenshot/7.png" alt="Ice Cave Level" class="image">
+          </a>
+          <a href="img/screenshot/8.png" class="grid-item">
+            <img loading="lazy" src="img/screenshot/8.png" alt="Desert Level" class="image">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="frame">
+    <div class="header">Videos</div>
+    <div class="content">
+      <div class="base"><h3>Trailer shown at the NSMB Franchise Modding Direct</h3>
+        <iframe src="https://www.youtube.com/embed/L3igvmsNNiM" allowfullscreen class="video"></iframe>
+        <h3>
+          <br>
+          Development Playlist
+        </h3>
+        <iframe src="https://www.youtube.com/embed/?listType=playlist&list=PL8bMv0TWmfedp4UC5MBMvvtBaxIyXpI2z"
+                allowfullscreen class="video"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>© {year} B1 Gaming</footer>
 </body>
 </html>

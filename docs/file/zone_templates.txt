@@ -1,0 +1,13 @@
+Screen Height    X-Size    Y-Size        approx X-Size
+14               416       224           410.3816
+19               560       304           556.9465
+24               704       384           703.5114
+28               824       448           820.7633
+17               504       272           498.3206
+20               592       320           586.2595
+16               472       256           469.0076
+28               824       448           820.7633
+7                208       112           205.1908
+10.5             312       168           307.7862
+
+All X-Size values were raised to the nearest number divisible by 8

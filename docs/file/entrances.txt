@@ -1,0 +1,24 @@
+0 Normal: Nothing special (Players will spawn in a random order)
+1 Normal: Acts as 0
+2 Door Exit: The Players look like they are coming out of a door. Can be used as an entrance as well.
+3-6 Pipe Exits: The Players exit out of a pipe in a specific direction. Nothing special.
+7 Falling (Fast): One Player falls at his highest momentum. If there are multiple Players they will all spawn as close together as they just can.
+8 Ground Pound: The Players make a Ground Pound when using this entrance. They will make a ground pound in a completely random order.
+9 Sliding: The Players slides down a slope using this entrance. If he falls directly onto the ground he will instantly stand up. The Players will slide down in a completely random order.
+10 Swimming: The Players starts in a swimming animation when using this entrance. (The water splash effect will always appear no matter at which y position you place him inside the water) If there is no water then he will just be in his swimming animation for a few frames before turning to his normal outside of water animations. They are spawning like in entrance 7.
+11 Normal (Mispositioned): The Players will spawn half a block to the left and 1 block on top of the actual position. They are spawning like in entrance 7.
+12 Normal (Mispositioned): The Players will spawn 1 block on top of the actual position. They are spawning like in entrance 7.
+13 Normal (Mispositioned): Same as 11.
+14 Unknown: The Players will be invisible before the level fade-in is finished. Step sounds can be heard before the Players appear. They are spawning like in entrance 7.
+15 Unknown: Same as 14.
+16-19: The Players exits out of a small pipe in a specific direction. Might look weird if a normal character gets out of it. (Do NOT use this as an exit)
+20 Jumping (Facing Right): The Players will jump a specific amount of blocks up and to the right. He will not interact with anything but after he passed the highest point of his jump he will be able to interact with tiles again. The Players will jump one after another. Players 1 starts and it ends with Players 4.
+21: Vine Entrance: The Players will climb up a Vine until the head part. After that he will just stay there until he jumps off of it. Players 1 will start with climbing and Players 4 is the last one.
+22: Pipe Facing Towards Screen: The Players will crawl out of a pipe which faces towards the screen. The Players are exiting the pipe one block below the actual position. Players 1 exits the pipe as the first one and Players 4 is the last one.
+23 Boss Entrance (Standing): The Players will stand still for around 5 seconds if every condition for a boss-fight is met. See retail 01-22 for an example.
+24 Jumping (Facing Left): Same as 20 except the Players are jumping left instead of right.
+25 Boss Entrance (Jumping Right): The Players will be launched up around 3-4 blocks and 2 blocks to the right. Same conditions and effects as 20. They are spawning like in entrance 7.
+26 Boss Entrance (Falling): The Players will be falling at their highest momentum. They are spawning like in entrance 7.
+27 Door Entrance: The Players can enter a door if certain conditions are met. Can be used as an exit as well. Needs a door behind it to work.
+28 Unknown (Crash): Just like the title implies it crashes the game. NEVER USE THIS ENTRANCE!!!!!
+29 Unknown Freeze: The Players will be stuck in their T-Pose. Just like the title implies the game will be frozen. Only if they are stuck in the wall the freeze will be fixed because the game tries to push them to the side. The Players will also spawn 10 1/2 blocks to the right and 2 1/2 blocks down because the entrance can also be marked as misplaced.

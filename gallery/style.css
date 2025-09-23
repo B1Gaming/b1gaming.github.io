@@ -1,0 +1,61 @@
+/*
+----------
+Main Stuff
+----------
+*/
+
+.main {
+  position: absolute;
+  width: auto;
+  margin: 10% 10%;
+}
+
+.title {
+  font-size: 50pt;
+  text-decoration: underline;
+}
+
+.main-align {
+  text-align: center;
+  width: auto;
+  margin-bottom: 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.grid-item {
+  background-color: #dfdfdf;
+  border: 1px solid black;
+  padding: 20px;
+  font-size: 16pt;
+  text-align: center;
+}
+
+.image {
+  width: 100%;
+}
+
+.image-bej3 {
+  width: 66.6%;
+}
+
+.icon-bej3 {
+  width: 30%;
+}
+
+.icon-splat {
+  width: 30%;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.icon-skaven {
+  width: 50%;
+}
+
+.sidenotes {
+  font-size: 12pt;
+}

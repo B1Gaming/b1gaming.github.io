@@ -1,0 +1,23 @@
+Things that **DON'T** spawn you facing left
+
+6  Pipe Facing Right
+19 Mini Pipe Facing Right
+22 Pipe Facing Towards The Screen
+20 Jumping (Facing Right)
+21 Vine Entrance (after jumping off)
+______________________________________________
+
+Only seems to apply to the starting entrance and the first entrance of an area
+_______________________________________________________________________
+
+Connected pipes make you exit facing the same direction you entered them
+________________________________________________________________________________
+
+If it's not the starting entrance specified in the Area Settings, only those types work (unless it's your first time loading an area. Then the top applies)
+
+0  Normal
+27 Door Entrance
+5  Pipe Facing Left 			(obviously)
+18 Mini Pipe Facing Left 		(obviously)
+24 Jumping (Facing Left) 		(obviously)
+1  Normal?

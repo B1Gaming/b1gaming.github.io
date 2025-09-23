@@ -1,0 +1,17 @@
+Name                Usage                                   Reference
+
+Normal              Overworld                               01-01 A1 Z1
+Wall Echo           Underground                             01-01 A2 Z1
+Room Echo           Underground w. BG-Rocks as only BG      05-01 A2 Z1
+Double Echo         Underwater                              01-04 A2 Z1
+Cave Echo           Boss Rooms                              01-22 A2 Z1
+Underwater Echo     Towers                                  01-22 A1 Z1
+Triple Echo         Castle                                  01-24 A1 Z1
+High Pitch Echo     Ghost House Indoors                     03-21 A1 Z1
+Tinny Echo          Sewer                                   06-03 A2 Z1
+Flat                Mountains                               06-01 A1 Z1
+Dull                Item Houses, Credits                    01-26 A1 Z1
+Hollow Echo         Dark Desert Cave                        02-03 A4 Z1
+Rich                Airship Indoors                         04-38 A1 Z3
+Triple Underwater   River Cave                              06-06 A2 Z1
+Ring Echo           Lava Underground                        08-02 A1 Z2
