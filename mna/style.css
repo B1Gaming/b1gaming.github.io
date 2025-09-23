@@ -67,21 +67,20 @@ Main Stuff
 
 :root {
   --logo-width: clamp(160px, 75%, 640px);
-  --text-outline:
-        /*4px 4px #0009, */ #000 3px 0px 0px, #000 2.83487px 0.981584px 0px,
-    #000 2.35766px 1.85511px 0px, #000 1.62091px 2.52441px 0px, #000 0.705713px 2.91581px 0px,
-    #000 -0.287171px 2.98622px 0px, #000 -1.24844px 2.72789px 0px, #000 -2.07227px 2.16926px 0px,
-    #000 -2.66798px 1.37182px 0px, #000 -2.96998px 0.42336px 0px, #000 -2.94502px -0.571704px 0px,
-    #000 -2.59586px -1.50383px 0px, #000 -1.96093px -2.27041px 0px, #000 -1.11013px -2.78704px 0px,
-    #000 -0.137119px -2.99686px 0px, #000 0.850987px -2.87677px 0px, #000 1.74541px -2.43999px 0px,
-    #000 2.44769px -1.73459px 0px, #000 2.88051px -0.838247px 0px;
+  --text-outline: /*4px 4px #0009, */ #000000 3px 0px 0px, #000000 2.83487px 0.981584px 0px,
+  #000000 2.35766px 1.85511px 0px, #000000 1.62091px 2.52441px 0px, #000000 0.705713px 2.91581px 0px,
+  #000000 -0.287171px 2.98622px 0px, #000000 -1.24844px 2.72789px 0px, #000000 -2.07227px 2.16926px 0px,
+  #000000 -2.66798px 1.37182px 0px, #000000 -2.96998px 0.42336px 0px, #000000 -2.94502px -0.571704px 0px,
+  #000000 -2.59586px -1.50383px 0px, #000000 -1.96093px -2.27041px 0px, #000000 -1.11013px -2.78704px 0px,
+  #000000 -0.137119px -2.99686px 0px, #000000 0.850987px -2.87677px 0px, #000000 1.74541px -2.43999px 0px,
+  #000000 2.44769px -1.73459px 0px, #000000 2.88051px -0.838247px 0px;
 }
 
 body {
   position: relative;
   font-family: 'Outfit', sans-serif;
   font-size: 20pt;
-  color: #fff;
+  color: #ffffff;
   margin: 0;
   border: none;
   padding: 0;
@@ -141,32 +140,34 @@ body {
 }
 
 .button-group {
-  width: clamp(200px, 200px, 100%);
+  width: clamp(7em, 7em, 100%);
   margin: 0 16px;
 }
 
 .button {
   font-family: inherit;
-  color: #fff;
+  color: #ffffff;
   font-size: 18px;
   text-shadow: var(--text-outline);
   border-radius: 5px;
-  border: 2px double #fff;
-  outline: 2px solid #000;
+  border: 2px double #ffffff;
+  outline: 2px solid #000000;
   background: linear-gradient(var(--button-gradient-top), var(--button-gradient-bottom));
-  height: 50px;
+  height: 3rem;
   transition-property: --button-gradient-top, --button-gradient-bottom, transform;
   transition-duration: 100ms;
-  transition-timing-function:ease-in-out;
+  transition-timing-function: ease-in-out;
   text-align: center;
   width: 100%;
-  margin: 16px 0;
+  margin: 1rem 0;
+
   &:hover {
     --button-gradient-top: #8cdc5a;
     --button-gradient-bottom: #fffa80;
     cursor: pointer;
     transform: scale(1.02);
   }
+
   &:active {
     --button-gradient-top: #c6ee55;
     --button-gradient-bottom: #fffd68;
@@ -174,7 +175,8 @@ body {
   }
 }
 
-#theme-header {
+footer {
+  font-family: 'Outfit', sans-serif;
   text-align: center;
   text-shadow: var(--text-outline);
 }
@@ -190,9 +192,9 @@ body {
 
 #main-page {
   margin-top: clamp(
-    calc((var(--logo-width) / 3900 * 1545) - 37px),
-    calc(100vh - 197px - (var(--logo-width) / 3900 * 1545)),
-    100vh
+      calc((var(--logo-width) / 3900 * 1545) - 37px),
+      calc(100vh - 197px - (var(--logo-width) / 3900 * 1545)),
+      100vh
   );
   justify-items: center;
   display: grid;
@@ -208,7 +210,7 @@ body {
   -webkit-border-image: url(./img/frame/frame.png) 64 15 15 15 round round;
   -o-border-image: url(./img/frame/frame.png) 64 15 15 15 round round;
   border-image: url(./img/frame/frame.png) 64 15 15 15 round round;
-  width: calc(min(66.7%, 1280px) - 60px);
+  width: calc(min(95%, 1280px) - 60px);
   margin-bottom: 5%;
   transform-style: preserve-3d;
   pointer-events: none;
@@ -240,7 +242,7 @@ body {
 
 .base {
   text-align: center;
-  padding: 50px 15px;
+  padding: 3rem 1rem;
   background-image: url('../mna/img/frame/stripe.svg');
   display: flex;
   flex-direction: column;
@@ -250,7 +252,7 @@ body {
 #download-link {
   display: grid;
   justify-items: center;
-  width: min(66.7%, 750px);
+  width: min(100%, 750px);
 }
 
 #demo-download {
@@ -274,19 +276,20 @@ body {
   margin: 5px;
   font-size: 16pt;
   text-align: center;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .image {
   width: 100%;
   transition: opacity 150ms ease-in-out;
+
   &:hover {
     opacity: 50%;
   }
 }
 
 .video {
-  width: clamp(100px, 66.7%, 640px);
+  width: clamp(100px, 90%, 640px);
   aspect-ratio: 16 / 9;
   border: 5px solid #fff8;
   border-top: 5px solid #0002;
@@ -336,11 +339,6 @@ body {
   }
 }
 
-footer {
-  text-align: center;
-  font-family: 'Outfit', sans-serif;
-}
-
 .hidden * {
   pointer-events: none;
 }
@@ -363,6 +361,14 @@ Media Queries
 
   body {
     font-size: 16pt;
+  }
+
+  #grid {
+    margin: 4% 0;
+  }
+
+  .base {
+    padding: 2rem 1rem;
   }
 }
 
