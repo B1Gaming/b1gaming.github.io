@@ -4,7 +4,7 @@ const footer = document.querySelector('footer');
 footer.textContent = footer.textContent.replace('{year}', currentTime.getFullYear().toString());
 
 let backgroundToggled = true;
-let previousShuffle = 0;
+let previousBgId = 0;
 let animEnabled = true;
 
 const cloudyHeader = document.getElementById('cloudy-header');
@@ -29,13 +29,13 @@ const setBackground = (backgroundIndex = 0) => {
     // 'Snow',
     // 'Mountains',
     // 'Sky',
-    // 'Volcano'
+    // 'Volcano',
   ];
 
   if (1 <= backgroundIndex && backgroundIndex <= worldThemes.length) {
     randomNumber = backgroundIndex;
   } else {
-    while (randomNumber === previousShuffle || randomNumber === 0) {
+    while (randomNumber === previousBgId || randomNumber === 0) {
       randomNumber = Math.ceil(Math.random() * worldThemes.length);
     }
   }
@@ -91,12 +91,12 @@ const setBackground = (backgroundIndex = 0) => {
   transition.style.backgroundImage = `${backgroundStylePreamble}${transitionNumber}/transition.png")`;
   underground.style.backgroundImage = `${backgroundStylePreamble}${undergroundNumber}/underground.jpg")`;
 
-  previousShuffle = randomNumber;
+  previousBgId = randomNumber;
   return `Setting theme to ${worldThemes[randomNumber - 1]}.`;
 };
 
 const viewBackground = () => {
-  let animType = backgroundToggled ? 'hideUI' : 'showUI';
+  const animType = backgroundToggled ? 'hideUI' : 'showUI';
   document.getElementById('title').style.animation = animType + ' 0.5s linear forwards';
   document.getElementById('main-page').style.animation = animType + ' 0.5s linear forwards';
   document.getElementById('title').classList.toggle('hidden');
@@ -105,8 +105,8 @@ const viewBackground = () => {
 };
 
 const toggleAnimations = () => {
-  let pause = animEnabled ? 'paused' : 'running';
-  let buttonText = animEnabled ? 'Enable' : 'Disable';
+  const pause = animEnabled ? 'paused' : 'running';
+  const buttonText = animEnabled ? 'Enable' : 'Disable';
   cloudyHeader.style.animationPlayState = pause;
   clouds.style.animationPlayState = pause;
   animEnabled = !animEnabled;

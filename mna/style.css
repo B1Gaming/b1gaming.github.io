@@ -21,7 +21,7 @@ Keyframes
   }
 
   100% {
-    background-position: -761px 0;
+    background-position: -38em 0;
   }
 }
 
@@ -66,20 +66,16 @@ Main Stuff
 }
 
 :root {
-  --logo-width: clamp(160px, 75%, 640px);
-  --text-outline: /*4px 4px #0009, */ #000000 3px 0px 0px, #000000 2.83487px 0.981584px 0px,
-  #000000 2.35766px 1.85511px 0px, #000000 1.62091px 2.52441px 0px, #000000 0.705713px 2.91581px 0px,
-  #000000 -0.287171px 2.98622px 0px, #000000 -1.24844px 2.72789px 0px, #000000 -2.07227px 2.16926px 0px,
-  #000000 -2.66798px 1.37182px 0px, #000000 -2.96998px 0.42336px 0px, #000000 -2.94502px -0.571704px 0px,
-  #000000 -2.59586px -1.50383px 0px, #000000 -1.96093px -2.27041px 0px, #000000 -1.11013px -2.78704px 0px,
-  #000000 -0.137119px -2.99686px 0px, #000000 0.850987px -2.87677px 0px, #000000 1.74541px -2.43999px 0px,
-  #000000 2.44769px -1.73459px 0px, #000000 2.88051px -0.838247px 0px;
+  --logo-width: clamp(10rem, 75%, 40rem);
+  --text-outine: -0.0875em -0.0875em black, 0 -0.0875em black, 0.0875em -0.0875em black, 0.0875em 0 black,
+  0.0875em 0.0875em black, 0 0.0875em black, -0.0875em 0.0875em black, -0.0875em 0 black;
 }
 
 body {
   position: relative;
-  font-family: 'Outfit', sans-serif;
-  font-size: 20pt;
+  font-family: Outfit, sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
   color: #ffffff;
   margin: 0;
   border: none;
@@ -101,65 +97,73 @@ body {
   width: 100%;
 }
 
+.background-container, #cloudy-header {
+  font-size: 1rem;
+}
+
 #underground {
   background-position-x: center;
-  background-position-y: max(2880px, calc(100vh + 1362px));
-  background-size: 1920px auto;
+  background-position-y: max(180em, calc(100vh + 85.125em));
+  background-size: 120em auto;
 }
 
 #transition {
   background-position-x: center;
-  background-position-y: max(2880px, calc(100vh + 1358px));
+  background-position-y: max(182.375em, calc(100vh + 84.875em));
   background-repeat: repeat-x;
+  background-size: 120em auto;
 }
 
 #overground {
   background-position-x: center;
-  background-position-y: max(1518px, calc(100vh - 4px));
+  background-position-y: max(97.125em, calc(100vh - 0.25em));
   background-repeat: repeat-x;
-  background-size: 1920px auto;
+  background-size: 120em auto;
 }
 
 #sky {
   background-repeat: repeat-x;
-  background-size: 4px max(1522px, 100vh);
+  background-size: 0.25em max(97.125em, 100vh);
 }
 
 #clouds {
   animation: cloud-scroll 50s linear infinite;
   background-repeat: repeat-x;
+  background-size: 38em;
 }
 
 #cloudy-header {
-  animation: cloud-scroll 25s linear infinite;
-  height: 200px;
+  animation: cloud-scroll 12.5s linear infinite;
+  height: 12.5rem;
   width: 100%;
   display: flex;
   flex-direction: row;
+  background-size: 38em;
+  background-repeat: repeat-x;
   justify-content: space-between;
 }
 
 .button-group {
-  width: clamp(7em, 7em, 100%);
-  margin: 0 16px;
+  width: clamp(8em, 12em, 100%);
+  margin: 0 1em;
 }
 
 .button {
   font-family: inherit;
   color: #ffffff;
-  font-size: 18px;
-  text-shadow: var(--text-outline);
-  border-radius: 5px;
-  border: 2px double #ffffff;
+  text-shadow: var(--text-outine);
+  font-size: 1.125em;
+  border-radius: 0.375em;
+  border: 2px solid #ffffff;
   outline: 2px solid #000000;
   background: linear-gradient(var(--button-gradient-top), var(--button-gradient-bottom));
-  height: 3rem;
+  height: 3em;
   transition-property: --button-gradient-top, --button-gradient-bottom, transform;
   transition-duration: 100ms;
   transition-timing-function: ease-in-out;
   text-align: center;
   width: 100%;
-  margin: 1rem 0;
+  margin: 0.75em 0;
 
   &:hover {
     --button-gradient-top: #8cdc5a;
@@ -176,9 +180,11 @@ body {
 }
 
 footer {
-  font-family: 'Outfit', sans-serif;
+  text-shadow: var(--text-outine);
+  font-family: Outfit, sans-serif;
   text-align: center;
-  text-shadow: var(--text-outline);
+  paint-order: stroke fill;
+  padding-bottom: 0.5em;
 }
 
 #title {
@@ -192,8 +198,8 @@ footer {
 
 #main-page {
   margin-top: clamp(
-      calc((var(--logo-width) / 3900 * 1545) - 37px),
-      calc(100vh - 197px - (var(--logo-width) / 3900 * 1545)),
+      calc((var(--logo-width) / 3900 * 1545) - 2.25em),
+      calc(100vh - 10em - (var(--logo-width) / 3900 * 1545)),
       100vh
   );
   justify-items: center;
@@ -202,15 +208,14 @@ footer {
 }
 
 .frame {
-  text-shadow: var(--text-outline);
   border-style: solid;
-  border-radius: 20px;
+  border-radius: 1.25em;
   border-width: 64px 15px 15px 15px;
   -moz-border-image: url(./img/frame/frame.png) 64 15 15 15 round round;
   -webkit-border-image: url(./img/frame/frame.png) 64 15 15 15 round round;
   -o-border-image: url(./img/frame/frame.png) 64 15 15 15 round round;
   border-image: url(./img/frame/frame.png) 64 15 15 15 round round;
-  width: calc(min(95%, 1280px) - 60px);
+  width: calc(min(95%, 64rem) - 3.75em);
   margin-bottom: 5%;
   transform-style: preserve-3d;
   pointer-events: none;
@@ -222,18 +227,19 @@ footer {
 
 .header {
   font-family: MarioFont, sans-serif;
-  text-shadow: var(--text-outline);
+  -webkit-text-stroke: 0.1875em black;
+  paint-order: stroke fill;
   text-align: center;
   left: 50%;
-  translate: -50% -117%;
-  font-size: 32pt;
+  translate: -50% -1.625em;
+  font-size: 1.75em;
   background-repeat: repeat-x;
   position: absolute;
   width: 100%;
 }
 
 .content {
-  margin: -6px;
+  margin: -0.375em;
   background-image: url('../mna/img/frame/base.svg');
   background-size: 100% 100%;
   position: relative;
@@ -242,30 +248,33 @@ footer {
 
 .base {
   text-align: center;
-  padding: 3rem 1rem;
+  text-shadow: var(--text-outine);
+  font-size: 1.125em;
+  padding: 3em 1em;
   background-image: url('../mna/img/frame/stripe.svg');
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-wrap: pretty;
 }
 
 #download-link {
   display: grid;
   justify-items: center;
-  width: min(100%, 750px);
+  width: min(100%, 32em);
 }
 
 #demo-download {
-  width: 100%;
+  width: min(40em, 100%);
 }
 
 #grid {
   display: grid;
   margin: 4% 5%;
   grid-template-columns: 50% 50%;
-  border: 5px solid #fff8;
-  border-top: 5px solid #0002;
-  border-left: 5px solid #0002;
+  border: 0.25em solid #fff8;
+  border-top: 0.25em solid #0002;
+  border-left: 0.25em solid #0002;
   line-height: 0;
   background-image: url('../mna/img/frame/base180.svg');
   background-size: 100% 100%;
@@ -273,8 +282,8 @@ footer {
 }
 
 .grid-item {
-  margin: 5px;
-  font-size: 16pt;
+  margin: 0.25em;
+  font-size: 1em;
   text-align: center;
   background-color: #ffffff;
 }
@@ -289,11 +298,11 @@ footer {
 }
 
 .video {
-  width: clamp(100px, 90%, 640px);
+  width: clamp(6.25em, 90%, 40em);
   aspect-ratio: 16 / 9;
-  border: 5px solid #fff8;
-  border-top: 5px solid #0002;
-  border-left: 5px solid #0002;
+  border: 0.25em solid #fff8;
+  border-top: 0.25em solid #0002;
+  border-left: 0.25em solid #0002;
 }
 
 #download-outline,
@@ -349,18 +358,18 @@ Media Queries
 -------------
 */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 40em) {
   .header {
-    font-size: 24pt;
-    translate: -50% -133%;
+    font-size: 1.75em;
+    translate: -50% -1.875em;
   }
 
   .content h3 {
-    font-size: 18pt;
+    font-size: 1.125em;
   }
 
   body {
-    font-size: 16pt;
+    font-size: 1rem;
   }
 
   #grid {
@@ -372,25 +381,25 @@ Media Queries
   }
 }
 
-@media only screen and (max-width: 465px) {
+@media only screen and (max-width: 30em) {
   .header {
-    font-size: 14pt;
-    translate: -50% -200%;
+    font-size: 1.5em;
+    translate: -50% -2em;
   }
 
   .content h3 {
-    font-size: 12pt;
+    font-size: 0.75em;
   }
 
   .button {
-    font-size: 10pt;
+    font-size: 0.625em;
   }
 
   .button-group {
-    margin: 4px 8px;
+    margin: 0.25em 0.5em;
   }
 
   .button {
-    margin: 4px 0;
+    margin: 0.25em 0;
   }
 }
